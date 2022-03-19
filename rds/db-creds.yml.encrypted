@@ -1,0 +1,7 @@
+aws kms encrypt \
+  --key-id <YOUR KMS KEY> \
+  --region <AWS REGION> \
+  --plaintext fileb://db-creds.yml \
+  --output text \
+  --query CiphertextBlob \
+  > db-creds.yml.encrypted
